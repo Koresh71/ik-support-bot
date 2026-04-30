@@ -33,3 +33,5 @@ def forward_to_admin(message):
         user_info = f"@{message.from_user.username}" if message.from_user.username else f"ID: {message.from_user.id}"
         bot.send_message(ADMIN_ID, f"📩 Новое обращение:\nОт: {user_info}\nТекст: {message.text}")
         bot.reply_to(message, "✅ Запрос передан специалисту.")
+        if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
